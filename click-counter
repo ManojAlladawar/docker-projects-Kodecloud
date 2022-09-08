@@ -1,0 +1,14 @@
+    1  docker run -it redis:alpine
+    2  docker run -it clickcounter kodekloud/click-counter
+    3  docker pull kodekloud/click-counter
+    4* docker run -it clickcounter 
+    5  docker images
+    6  docker run -it --name  clickcounter kodekloud/click-counter
+    7  docker run -d --name=clickcounter --link redis:redis -p 8085:5000 kodekloud/click-counter
+    8  docker rm clickcounter
+    9  docker run -d --name=clickcounter --link redis:redis -p 8085:5000 kodekloud/click-counter
+   10  docker stop redis
+   11  docker rm redis
+   12  docker stop clickcounter
+   13  docker rm clickcounter
+   14  history
